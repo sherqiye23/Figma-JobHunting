@@ -1,0 +1,274 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container-navbar{
+    margin: 0px auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      margin-bottom: 8px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a:nth-child(2) {
+      text-decoration: underline;
+      color: blue;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      margin: 10px;
+    }
+  }
+
+  .login {
+    ul {
+      li:nth-child(2) {
+        background-color: blue;
+        margin: 10px;
+
+        a {
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* main */
+
+#head-text{
+    margin-top: 50px;
+    .header{
+        text-align: center;
+    }
+}
+
+/* inputs header */
+
+#search-inputs{
+    .inputs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px auto;
+        background-color: rgb(255, 255, 255);
+        width: 80%;
+        height: 90px;
+
+        input{
+            border: none;
+            text-decoration: underline;
+            margin: 15px;
+            padding: 10px;
+            width: 400px;
+        }
+
+        i{
+            font-size: larger;
+            margin: 8px;
+        }
+    }
+}
+
+/* inputs header  end*/
+
+/* cards chekboxs ,*/
+
+.row{
+    margin: 50px auto;
+
+    .chekboxs{
+        margin-left: 160px;
+    }
+
+    .card{
+       display: flex;
+       justify-content: space-around;
+       align-items: baseline;
+       flex-direction: row;
+
+       img{
+        width: 100%;
+        height: 50px;
+       }
+    }
+}
+
+/* cards chekboxs  end*/
+
+/* main end*/
+
+
+.container {
+    display: flex;
+    /* max-width: 1200px; */
+    /* margin: 0 auto;
+    padding: 20px;
+    gap: 20px; */
+}
+
+.filters {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.filters h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.filters ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filters li {
+    margin-bottom: 10px;
+}
+
+/* Job Listi */
+.job-listings {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.job-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.job-details {
+    flex: 1;
+}
+
+.job-details h2 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.job-details p {
+    font-size: 14px;
+    color: #555;
+}
+
+.tags {
+    margin: 10px 0;
+}
+
+.tag {
+    background-color: #eef;
+    color: #007bff;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.capacity {
+    font-size: 12px;
+    color: #777;
+}
+
+.apply-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Pages */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.pagination span {
+    padding: 5px 10px;
+    color: #777;
+}
+
+/* Responsive dizayn */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* fooooooter */
+footer{
+    background-color: rgba(32, 36, 48,1);
+}
+
+ul{
+    list-style-type: none;
+    
+    a{
+        text-decoration: none;
+        color:white
+    }
+}
+/* fooooooter  end*/
