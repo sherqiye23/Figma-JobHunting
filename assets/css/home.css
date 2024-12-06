@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+body {
+    background-color: #202430;
+}
+
+/* header */
+header .container {
+    padding: 0 20px;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* nav */
+header .container nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+}
+.nav-logo .menu {
+    color: #F8F8FD;
+}
+.nav-logo .logo-name {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+}
+.nav-login #login-btn{
+    position: relative;
+    font-weight: bold;
+    color: #4640DE;
+    padding: 12px 24px;
+    margin-right: 20px;
+}
+#login-btn::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    right: 0;
+    top: 0px;
+}
+.nav-login #signup-btn{
+    color: #fff;
+    background-color: #4640DE;
+    padding: 12px 24px;
+
+}
+
+/* header wrapper */
+.header-wrapper .header-title{
+    font-size: 72px;
+    font-weight: bold;
+    width: 440px;
+    gap: 23px;
+    display: flex;
+    flex-direction: column;
+}
+.header-wrapper {
+    margin-top: 90px;
+}
+.header-parag {
+    margin: 23px 0px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #FFF;
+    width: 440px;
+}
+.header-search {
+    width: 600px;
+}
+.header-form {
+    padding: 16px;
+    background-color: #FFF;
+    margin-bottom: 23px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.header-form label{
+    margin-right: 5px;
+}
+.header-form input, .header-form select{
+    padding: 10px 0;
+    margin-right: 16px;
+    border-bottom: 1px solid #6d6d6d;
+}
+.header-form i{
+    color: #202430;
+}
+#search-job{
+    background-color: #4640DE;
+    color: #FFF;
+    font-weight: bold;
+    padding: 14px 27px;
+}
+
+@media (max-width:768px) {
+    header .container nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+@media (max-width:576px) {
+    header .container nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .header-form {
+        width: 100%;
+        margin-right: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .header-form input, select{
+        width: 100%;
+    }
+    .header-title {
+        width: 100%;
+    }
+}
+
+
+
