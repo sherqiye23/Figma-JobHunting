@@ -25,9 +25,6 @@
         font-size: 25px;
         gap: 10px;
 
-        img {
-            object-fit: contain;
-        }
     }
 
     .lists {
