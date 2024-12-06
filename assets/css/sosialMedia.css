@@ -107,6 +107,8 @@ main {
     top: 0;
 
     #header {
+        border-bottom: 2px solid #E9EBFD;
+
         .main-head {
 
             padding: 30px;
@@ -145,27 +147,32 @@ main {
     }
 
     #main {
+
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 30px;
-            .content{
+
+            .content {
                 display: flex;
                 gap: 20px;
                 align-items: center;
-                .text{
+
+                .text {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
                     font-size: 18px;
-                    #hired{
+
+                    #hired {
                         opacity: .6;
                     }
                 }
             }
-            .btn{
-                button{
+
+            .btn {
+                button {
                     color: #4640DE;
                     border: 1px solid #4640DE;
                     display: flex;
@@ -176,56 +183,209 @@ main {
                 }
             }
         }
-       .lists{
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        font-weight: bold;
-        gap: 10px;
-        ul{
+
+        .lists {
+            padding: 30px;
             display: flex;
-            gap: 20px;
-            font-size: 20px;
-            li:nth-child(1){
-                opacity: .5;
+            flex-direction: column;
+            font-weight: bold;
+            gap: 10px;
+
+            ul {
+                display: flex;
+                gap: 20px;
+                font-size: 20px;
+
+                li:nth-child(1) {
+                    opacity: .5;
+                }
+
+                li:nth-child(2) {
+                    opacity: .5;
+                }
+
+                li:nth-child(3) {
+                    position: relative;
+
+                    &::after {
+                        content: " ";
+                        position: absolute;
+                        background-color: #4640DE;
+                        width: 100%;
+                        bottom: -12px;
+                        left: 0;
+                        border-radius: 20px;
+                        height: 3px;
+                    }
+                }
+
             }
-            li:nth-child(2){
-                opacity: .5;
+
+            .line {
+                width: 100%;
+                height: 3px;
+                background-color: #E9EBFD;
             }
-            li:nth-child(3){
-                position: relative;
-                &::after{
-                    content: " ";
-                    position: absolute;
-                    background-color: #4640DE;
+        }
+    }
+
+    #myCards {
+        padding: 30px;
+
+        .myCards {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+
+            .card-left {
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .card-right{
+                width: 30%;
+            }
+
+            .card {
+                width: 100%;
+
+                .image {
                     width: 100%;
-                    bottom: -12px;
-                    left: 0;
-                    border-radius: 20px;
-                    height: 3px;
+                    display: flex;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
-            
-        }
-        .line{
-            width: 100%;
-            height: 3px;
-            background-color: #E9EBFD;
-        }
-       }
-    }
-    #myCards{
-        padding: 30px;
-      .myCards{
-        display: flex;
-        gap: 10px;
 
-        .card-wrapper{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* gap: 10px; */
+            .card-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
         }
-      }
     }
+}
+
+/* Responsivlik */
+@media (min-width: 0px) and (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+        top: 0;
+    }
+
+    .allBoxs {
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+
+    }
+
+
+    .myCards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        width: 100%;
+        padding: 0;
+        position: static;
+    }
+
+    #main .lists {
+        text-align: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .main-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-head .container {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    #main .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .sidebar {
+        width: 35%;
+    }
+
+    .allBoxs {
+        width: 65%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .myCards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-head .container {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    #main .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #main .lists {
+        text-align: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .sidebar {
+        width: 30%;
+    }
+
+    .allBoxs {
+        width: 70%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .myCards {
+        display: flex;
+        flex-direction: column;
+    }
+    .card-left {
+        width: 60%;
+        display: flex !important;
+    }
+    .card-right{
+        width: 40%;
+    }
+
 }
